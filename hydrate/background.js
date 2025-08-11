@@ -104,7 +104,7 @@ async function maybeNotify() {
 
   chrome.notifications.create("hydrate:reminder", {
     type: "basic",
-    iconUrl: "", // optional; Chrome allows empty in dev. Add an icons/128.png if you like.
+    iconUrl: "icons/icon128.png", // show the extension icon in the reminder
     title,
     message,
     priority: 1,
