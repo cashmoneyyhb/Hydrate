@@ -1,1 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydrate — Options</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hydrate Settings</h1>
+      <p class="muted">Tune reminders to your routine.</p>
+    </header>
 
+    <form id="form">
+      <div class="grid">
+        <label>Daily target (cups)
+          <input type="number" id="targetCups" min="1" max="99" required />
+        </label>
+        <label>Cup size (ml)
+          <input type="number" id="cupSizeMl" min="50" max="2000" step="50" required />
+        </label>
+        <label>Interval (minutes)
+          <input type="number" id="intervalMin" min="5" max="360" step="5" required />
+        </label>
+        <label>Start hour
+          <input type="number" id="startHour" min="0" max="23" required />
+        </label>
+        <label>End hour
+          <input type="number" id="endHour" min="0" max="23" required />
+        </label>
+        <label>Snooze (minutes)
+          <input type="number" id="snoozeMin" min="5" max="120" step="5" required />
+        </label>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" id="notificationsEnabled" />
+        <span>Enable notifications</span>
+      </label>
+
+      <div class="actions">
+        <button type="submit" class="primary">Save changes</button>
+        <button type="button" id="reset" class="ghost">Reset to defaults</button>
+      </div>
+
+      <p class="note">
+        Note: General guidance suggests ~8 cups/day for many adults, but needs vary by person. Set what feels right for you.
+      </p>
+    </form>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
